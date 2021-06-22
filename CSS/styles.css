@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-@import url( ./_variables.css );
-
+@import './_variables.css' ;
+/* @import url( ) */
 
 * {
     padding: 0;
@@ -12,12 +12,16 @@ html{
     font-size: 18px;
     font-family: 'Roboto Mono', monospace;
     scroll-behavior: smooth;
+    background-image: var( --background);
 }
 
 a{
     text-decoration: none;
 }
-
+img{
+    max-width: 100%;
+    height: auto;
+}
 .container {
     min-height: 100vh;
     width: 100%;
@@ -30,9 +34,9 @@ a{
 .cta{
     display: inline-block;
     padding: 10px 30px;
-    color: rgb(85, 1, 1);   
+    color: grey;   
     background-color: transparent;
-    border: 2px solid rgb(85, 1, 1);
+    border: 2px solid grey;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
@@ -41,16 +45,37 @@ a{
     transition-property: background-color, color;
 }
 
+.scroll-down-box{
+    height: 70px;
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.scroll-down-box .scroll-arrow{
+    width: 100%;
+    height: auto;
+    color: white;
+}
+
 
 .cta:hover {
     color: white;
-    background-color: rgb(85, 1, 1);
+    border: 2px solid white;
+    font-weight: 900;
 }
 
-/* hero section */
 
-#hero {
-    background-image: linear-gradient( to right, #271a33 0%, #1a1122 100% );
+
+/* hero section */
+ #hero {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: var( --background );
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -69,35 +94,35 @@ a{
 }
 
 #hero .hero{
-    max-width: 1200px;
+
     margin: 0 auto;
     padding: 0 50px;
     justify-content: flex-start;
-
 }
 
 #hero h1{
     display: block;
     width: fit-content;
-    font-size: 6 rem;
+    font-size: 3 vh;
     position: relative;
     color: transparent;
-    animation: text_reveal .5s ease forwards;
-    animation-delay: 1.5s;
+    
+    animation: text_reveal 1s ease forwards;
+    animation-delay: 2s;
 }
 
-#hero h1 span{
+ #hero h1 span{
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width:  0%;
-    background-color: rgb(85, 1, 1);
+    background-color:  var( --dark-red );
     animation: text_reveal_box 1s ease;
-    animation-delay: 1s;
+    animation-delay: 1.5s;
 }
 
-#hero  .scroll-down-box{
+#hero .scroll-down-box{
     height: 70px;
     width: 50px;
     position: absolute;
@@ -113,8 +138,8 @@ a{
     color: white;
 }
 
-.scroll-arrow::before,
-.scroll-arrow::after{  
+#hero  .scroll-down-box .scroll-arrow::before,
+#hero  .scroll-down-box .scroll-arrow::after{  
     animation: scroll-down 1s ease-in-out infinite;
 }
 
@@ -122,20 +147,23 @@ a{
 .scroll-arrow::after{
     top:30%;
 }
-
-
 /* end hero section */
 
+
+
+
 /* start about */
+
 
 #about .about{
     flex-direction: column-reverse;
     text-align: center;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 100px 20px;
-    background-image: linear-gradient( to right, #271a33 0%, #1a1122 100% );
+    background-image: var( --background );
+    color: white;
 }
+
 
 
 #about .col-right{
@@ -147,30 +175,144 @@ a{
     width: 100%;
 }
 
-#about .col-right h2{
+  #about .col-right h2{
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: .2rem;
     margin-bottom: 20px;
+    color: white;
+
 }
 
-#about .col-right p {
+  #about .col-right p {
     margin-bottom: 20px;
+    color: white;
 }
 
-#about .col-right .cta{
-    color: black;
+  #about .col-right .cta{
     margin-bottom: 50px;
     padding: 10px 20px;
     font-size: .5rem;
 }
 
 
+#about .about  .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: grey;   
+    background-color: transparent;
+    border: 2px solid grey;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+#about .about .cta:hover {
+    color: white;
+    border: 2px solid white;
+    font-weight: 900;
+}
 
 
+#about .scroll-down-box{
+    height: 70px;
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    border-radius: 50px;
+    cursor: pointer;
+}
 
-
+#about .scroll-down-box .scroll-arrow{
+    width: 100%;
+    height: auto;
+    color: white;
+}
 /* end about */
+
+
+/* start portfolio */
+
+
+/* section__title{
+    display: block;
+    font-size small
+    margin bottom --mb-3
+section__subtitle
+portfolio__content
+container
+ */
+
+.portfolio-container{
+    overflow: initial;
+}
+
+.swiper-wrapper{
+    height: 30rem;
+}
+
+.portfolio-content{
+    height: 100%;
+    align-content: center;
+}
+
+.portfolio-img{
+    max-width: 80%;
+    height: auto;
+    border-radius: .5rem;
+    justify-self: center;
+}
+
+#portfolio h2{
+    text-align: center;
+    margin-top: 2rem;
+    color: white;
+    font-size: 1.5rem ; /* --h3-font-size */
+    margin-bottom: 0.5rem; /* --mb-0-5 */
+
+}
+.portfolio-description, .portfolio-img, .portfolio-content{
+    text-align: center;
+}
+
+.portfolio-description{
+     text-align: center;
+     margin-bottom: 0.75rem ; /*--mb-0-75 */
+}
+
+.swiper-button:hover .button-icon{
+    transform: translateX( .25rem );
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    content: '';
+}
+
+/* .swiper-portfolio-icon{
+    font-size: 2rem;
+} */
+
+.swiper-button-prev{
+    left: -.5rem;
+}
+
+.swiper-button-next{
+    right: -.5rem;
+}
+
+/* .swiper-container-horizontal > .swiper-pagination-bullets{
+    bottom: -2.5rem;
+} */
+
+
+
+
+
 
 @keyframes text_reveal_box{
     50%{
@@ -184,24 +326,14 @@ a{
 }
 
 @keyframes text_reveal{
-    100% {
-        color: white;
-    }
+    100% { color: white; }
 }
 
 @keyframes scroll-down{
-    0%{
-        opacity: 1;
-    }
-    30%{
-        opacity: 1;
-    }
-    60%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
+    0%{ opacity: 1; }
+    30%{ opacity: 1; }
+    60%{ opacity: 1; }
+    100%{ opacity: 0;
         top: 90%;
     }
-
 }
