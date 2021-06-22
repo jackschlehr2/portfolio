@@ -9,6 +9,6 @@ let swiper = new Swiper( '.portfolio-container', {
           el: ".swiper-pagination",
           clickable: true,
         },
-        mousewheel: true,
+        mousewheel: false,
         keyboard: true,
       });
