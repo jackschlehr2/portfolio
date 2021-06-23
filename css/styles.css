@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @import './_variables.css' ;
-/* @import url( ) */
 
 * {
     padding: 0;
@@ -119,8 +118,6 @@ img{
     height: 100%;
     width:  0%;
     background-color:  rgb(83, 21, 2);
-    background-image: linear-gradient( to right, #362546 0%, #21162b 100% );   
-
     animation: text_reveal_box 1s ease;
     animation-delay: 1.5s;
 }
