@@ -12,7 +12,8 @@ html{
     font-size: 18px;
     font-family: 'Roboto Mono', monospace;
     scroll-behavior: smooth;
-    background-image: var( --background);
+    background-image: var( --background);   
+    background-image: linear-gradient( to right, #362546 0%, #21162b 100% );   
 }
 
 a{
@@ -118,6 +119,8 @@ img{
     height: 100%;
     width:  0%;
     background-color:  var( --dark-red );
+    background-image: linear-gradient( to right, #362546 0%, #21162b 100% );   
+
     animation: text_reveal_box 1s ease;
     animation-delay: 1.5s;
 }
@@ -161,6 +164,8 @@ img{
     margin: 0 auto;
     padding: 100px 20px;
     background-image: var( --background );
+    background-image: linear-gradient( to right, #362546 0%, #21162b 100% );   
+
     color: white;
 }
 
