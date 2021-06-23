@@ -249,10 +249,12 @@ container
 
 .portfolio-container{
     overflow: initial;
+    height: 70%;
 }
 
+
 .swiper-wrapper{
-    height: 30rem;
+    max-height: 70%;
 }
 
 .portfolio-content{
@@ -261,6 +263,7 @@ container
 }
 
 .portfolio-img{
+    width: 50%;
     max-width: 80%;
     height: auto;
     border-radius: .5rem;
@@ -272,7 +275,7 @@ container
     margin-top: 2rem;
     color: white;
     font-size: 1.5rem ; /* --h3-font-size */
-    margin-bottom: 0.5rem; /* --mb-0-5 */
+    margin-bottom: 0.5rem; /* --mb-0-5; */
 
 }
 .portfolio-description, .portfolio-img, .portfolio-content{
@@ -282,6 +285,7 @@ container
 .portfolio-description{
      text-align: center;
      margin-bottom: 0.75rem ; /*--mb-0-75 */
+
 }
 
 .swiper-button:hover .button-icon{
@@ -303,6 +307,10 @@ container
 
 .swiper-button-next{
     right: -.5rem;
+}
+
+.swiper-pagination{
+    border: top 0;
 }
 
 /* .swiper-container-horizontal > .swiper-pagination-bullets{
