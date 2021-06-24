@@ -257,6 +257,9 @@ container
 
 .swiper-wrapper{
     max-height: 70%;
+    position: relative;
+    padding: 0;
+    margin: 0;
 }
 
 .portfolio-content{
@@ -278,16 +281,15 @@ container
     color: white;
     font-size: 1.5rem ; /* --h3-font-size */
     margin-bottom: 0.5rem; /* --mb-0-5; */
-
 }
 .portfolio-description, .portfolio-img, .portfolio-content{
     text-align: center;
+    color: white;
 }
 
 .portfolio-description{
      text-align: center;
-     margin-bottom: 0.75rem ; /*--mb-0-75 */
-
+     margin-bottom: 0.75rem ; 
 }
 
 .swiper-button:hover .button-icon{
@@ -312,12 +314,14 @@ container
 }
 
 .swiper-pagination{
-    border: top 0;
+    position: relative;
+    bottom: 0;
+    /* top: -20px; */
 }
 
-/* .swiper-container-horizontal > .swiper-pagination-bullets{
-    bottom: -2.5rem;
-} */
+.swiper-container-horizontal > .swiper-pagination-bullets{
+    position: absolute;
+}
 
 
 
