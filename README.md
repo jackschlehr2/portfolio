@@ -1,2 +1,3 @@
 # portfolio
-My personal website built in HTML, CSS, and Javscript
+My personal website that built with HTML, CSS, and Javscript
+and can be accessed at [jackschlehr.com](jackschlehr.com)
