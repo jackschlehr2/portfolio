@@ -156,42 +156,63 @@ img{
 
 
 #about .about{
-    flex-direction: column-reverse;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
     margin: 0 auto;
     padding: 100px 20px;
     background-image: var( --background );
     background-image: linear-gradient( to right, #362546 0%, #21162b 100% );   
-
     color: white;
 }
 
 
 
-#about .col-right{
+#about {
     width: 200px;
     height: auto;
-}
-
-#about .col-right{
     width: 100%;
+    position: relative;
 }
 
-  #about .col-right h2{
-    font-size: 1rem;
-    font-weight: 500;
+#about .about{
+    position: relative;
+}
+
+
+#about .mandel-animation{
+    width: 50% ;
+}
+#about .mandel-animation table{
+    padding: 0 0 ;
+    z-index: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    position: absolute;
+    table-layout: fixed;
+    
+}
+
+  #about   h1{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
     letter-spacing: .2rem;
+    margin-bottom: 10px;
+    color: white;
+    z-index: 5;
+
+} 
+
+  #about   p {
     margin-bottom: 20px;
     color: white;
-
+    z-index: 5;
 }
 
-  #about .col-right p {
-    margin-bottom: 20px;
-    color: white;
-}
 
-  #about .col-right .cta{
+  #about   .cta{
     margin-bottom: 50px;
     padding: 10px 20px;
     font-size: .5rem;
@@ -210,6 +231,7 @@ img{
     margin-top: 30px;
     transition: .3s ease;
     transition-property: background-color, color;
+    z-index: 5;
 }
 
 #about .about .cta:hover {
@@ -219,35 +241,30 @@ img{
 }
 
 
-#about .scroll-down-box{
+#about .about .scroll-down-box{
     height: 70px;
     width: 50px;
     position: absolute;
-    left: 50%;
     bottom: 0px;
     border-radius: 50px;
     cursor: pointer;
 }
 
-#about .scroll-down-box .scroll-arrow{
-    width: 100%;
-    height: auto;
-    color: white;
-}
+
+
 /* end about */
 
 
+
+
+
+
+
+
+
+
+
 /* start portfolio */
-
-
-/* section__title{
-    display: block;
-    font-size small
-    margin bottom --mb-3
-section__subtitle
-portfolio__content
-container
- */
 
 .portfolio-container{
     overflow: initial;
@@ -301,9 +318,6 @@ container
     content: '';
 }
 
-/* .swiper-portfolio-icon{
-    font-size: 2rem;
-} */
 
 .swiper-button-prev{
     left: -.5rem;
@@ -322,6 +336,51 @@ container
 .swiper-container-horizontal > .swiper-pagination-bullets{
     position: absolute;
 }
+ /* end portfolio  */
+
+ /* start footer */
+ footer {
+     height: 200px;
+     text-align: center;
+     background: #1f2c30;
+ }
+ footer .footer .icons{
+    float: left;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+ footer .footer .icons .linkedin{
+
+     width: 32px;
+     height: auto;
+     margin: .5rem;
+
+ }
+ footer .footer .icons .github{
+    height: auto;
+    margin: .5rem;
+
+}
+
+
+
+
+ footer .footer .copyright{
+     bottom: 0;
+ }
+
+
+
+
+
+
+ /* end footer  */
 
 
 
