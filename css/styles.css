@@ -108,7 +108,6 @@ img{
     font-size: 3 vh;
     position: relative;
     color: transparent;
-    
     animation: text_reveal 1s ease forwards;
     animation-delay: 2s;
 }
